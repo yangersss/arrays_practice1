@@ -5,7 +5,7 @@ public class arr_practicesort {
 
         for (int i = 0; i < numbers.length; i++){
             current_highest = i;
-            for (int j = 0; j < numbers.length; j++){
+            for (int j = i + 1; j < numbers.length; j++){
                 if (numbers[current_highest] < numbers[j]){
                     current_highest = j;
                 }
@@ -14,6 +14,10 @@ public class arr_practicesort {
             int temp = numbers[i];
             numbers[i] = numbers[current_highest];
             numbers[current_highest] = temp;
+
+            //int temp = numbers[current_highest];
+            //numbers[current_highest] = numbers[i];
+            //numbers[i] = temp;
         }
 
         for (int x : numbers){
